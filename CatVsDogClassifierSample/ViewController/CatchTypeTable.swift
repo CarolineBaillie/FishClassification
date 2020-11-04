@@ -17,16 +17,21 @@ class CatchTypeTable: UITableViewController {
     var Ftypes = [String]()
     
     override func viewDidLoad() {
+        self.removeSpinner()
         super.viewDidLoad()
-        sessionManager.shared.requestTypesCount { (success) in
-            if success {
-                self.tableData = sessionManager.shared.fishCountArray
-                self.tableView.reloadData()
-            }
-        }
         sessionManager.shared.UpdateFishCat { (success) in }
         self.tableD = sessionManager.shared.GlobalDict
         self.Ftypes = sessionManager.shared.AllTypes
+        
+        //go back only to settings
+        let newBackButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(CatchTypeTable.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
+    }
+    
+    @objc func back(sender: UIBarButtonItem) {
+        if let firstViewController = self.navigationController?.viewControllers[2] {
+            self.navigationController?.popToViewController(firstViewController, animated: true)
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

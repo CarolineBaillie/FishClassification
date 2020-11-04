@@ -23,6 +23,7 @@ class UploadController: UIViewController {
         super.viewDidLoad()
         imagePicker.delegate = self
         guard modelDataHandler != nil else {
+            print(modelDataHandler)
           fatalError("Model set up failed")
         }
     }

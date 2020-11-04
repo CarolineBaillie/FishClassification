@@ -32,6 +32,7 @@ class sessionManager: NSObject {
     //lastimagetaken ->
     
     func requestGetPages (completion:@escaping (_ success:Bool) -> ()) {
+        AllPages.removeAll()
         let query = PFQuery(className: "page")
         query.whereKey("userID", equalTo:user.id)
         query.findObjectsInBackground { (objects, error) in
@@ -106,18 +107,44 @@ class sessionManager: NSObject {
         pg["weight"] = page.weight
         pg["dimensions"] = page.dimensions
         
-        let imageData = page.Image.pngData()
-        let imageFile = PFFileObject(name:"image.png", data:imageData!)
+        // reducing image size
+        let image = page.Image
+        let actualHeight:CGFloat = image.size.height
+        let actualWidth:CGFloat = image.size.width
+        let imgRatio:CGFloat = actualWidth/actualHeight
+        let maxWidth:CGFloat = 1024.0
+        let resizedHeight:CGFloat = maxWidth/imgRatio
+        let compressionQuality:CGFloat = 0.5
+        
+        let rect:CGRect = CGRect(x: 0, y: 0, width: maxWidth, height: resizedHeight)
+        UIGraphicsBeginImageContext(rect.size)
+        image.draw(in: rect)
+        let img: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        let imageData:Data = img.jpegData(compressionQuality: compressionQuality)!
+        UIGraphicsEndImageContext()
+        
+        let imageFinal = UIImage(data: imageData)!
+        
+        // preping to save image
+        let imgData = imageFinal.pngData()
+        let imageFile = PFFileObject(name:"image.png", data:imgData!)
         pg["Image"] = imageFile
 
         pg.saveInBackground { (succeeded, error)  in
             if (succeeded) {
-                // The object has been saved.
-                //save to local array
+//                The object has been saved.
+//                save to local array
                 self.AllPages.append(page)
+                self.AllTypes.append(page.fishType)
+                self.UpdateFishCat { (success) in
+                    if success {
+                        print("updated dictionary")
+                    }
+                }
                 completion(true)
             } else {
                 // There was a problem, check error.description
+                print("ERROR!")
                 completion(false)
             }
         }

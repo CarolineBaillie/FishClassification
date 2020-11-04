@@ -56,27 +56,14 @@ class PicInfo : UIViewController {
     }
     
     @IBAction func submitToggled(_ sender: Any) {
+        self.showSpinner()
         //lower image size in swift
         var newPage = page(fishType: inference, Image: image, desc: descriptionField.text, location: locationField.text!, catchDate: dateField.text!, weight:weightField.text!, dimensions: dimensionsField.text!)
-        sessionManager.shared.requestCreatePage(page: newPage) { (success) in
+        sessionManager.shared.requestCreateNewPage(page: newPage) { (success) in
             if success {
-                print("worked")
                 //go to diff viewController
-            }
-            else {
-                //error
-                print("failed")
-            }
-        }
-        
-        
-        //get count from db? Best way to do?
-        let count = 0
-        var newTC = uniqueFishCount(name:inference, count:count+1)
-        sessionManager.shared.requestCreateTypesCount(tc: newTC) { (success) in
-            if success {
-                print("worked")
-                //go to diff viewController
+                let customViewController = self.storyboard?.instantiateViewController(withIdentifier: "CatchTypeTable") as! CatchTypeTable
+                self.navigationController?.pushViewController(customViewController, animated: true)
             }
             else {
                 //error

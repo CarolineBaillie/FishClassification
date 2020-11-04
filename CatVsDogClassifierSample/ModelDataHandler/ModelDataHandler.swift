@@ -51,9 +51,9 @@ class ModelDataHandler {
   let inputHeight = 224
   
   // MARK: - Private Properties
-  
+
   /// List of labels from the given labels file.
-  private var labels: [String] = ["Caroline", "Sock", "Pencil"]
+  private var labels: [String] = ["Redear Sunfish", "Green Sunfish", "Redbreast Sunfish", "Bluegill Sunfish", "Warmouth Sunfish", "Pumpkinseed Sunfish", "Flathead Catfish", "Blue Catfish", "Channel Catfish", "Largemouth Bass", "Smallmouth Bass", "Striped Bass", "White Bass", "Brown Trout", "Brook Trout", "Rainbow Trout", "Cutthroat Trout", "Lake Trout", "Walleye", "White Crappie", "Black Crappie", "Amberjack", "Yellow Perch", "Sauger", "Northern Pike", "Muskellunge", "Chain Pickerel", "American Pickerel", "Redfin Pickerel", "Atlantic Salmon", "Chinook Salmon", "Coho Salmon", "Pink Salmon", "Carp", "Sturgeon", "Skipjack Tuna", "Bluefin Tuna", "Yellowfin Tuna", "Atlantic Cod", "Pacific Cod"]
   
   /// TensorFlow Lite `Interpreter` object for performing inference on a given model.
   private var interpreter: Interpreter

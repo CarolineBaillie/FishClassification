@@ -16,7 +16,11 @@ class settings: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sessionManager.shared.requestGetPages { (success) in }
+        sessionManager.shared.requestGetPages { (success) in
+            if success {
+                self.removeSpinner()
+            }
+        }
         
         var objVC: UIViewController? = storyboard!.instantiateViewController(withIdentifier: "settings")
         var aObjNavi = UINavigationController(rootViewController: objVC!)

@@ -31,9 +31,7 @@ class signup: UIViewController {
     }
     
     @IBAction func signupToggled(_ sender: Any) {
-        //get username and password
-        //create user
-        print("tapped")
+        self.showSpinner()
         //check username and password field are not empty / nil
         let user = PFUser()
         user.username = usernameTextField.text!

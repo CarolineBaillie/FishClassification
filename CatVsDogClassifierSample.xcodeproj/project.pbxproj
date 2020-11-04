@@ -17,8 +17,9 @@
 		162712232538D257004FB9E4 /* uniqueFishCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162712222538D257004FB9E4 /* uniqueFishCount.swift */; };
 		162712252538D5F0004FB9E4 /* page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162712242538D5F0004FB9E4 /* page.swift */; };
 		1627122B2548C164004FB9E4 /* currentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1627122A2548C164004FB9E4 /* currentUser.swift */; };
+		1627122D2550ABDF004FB9E4 /* AIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1627122C2550ABDF004FB9E4 /* AIUtil.swift */; };
+		162712332550C5CE004FB9E4 /* model_unquant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 162712322550C5CE004FB9E4 /* model_unquant.tflite */; };
 		16F7A56F251AA32700A72518 /* labels copy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16F7A56D251AA32700A72518 /* labels copy.txt */; };
-		16F7A570251AA32700A72518 /* model_unquant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 16F7A56E251AA32700A72518 /* model_unquant.tflite */; };
 		16F7A5B6251AB38100A72518 /* PicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5B5251AB38100A72518 /* PicController.swift */; };
 		16F7A5B8251AB38F00A72518 /* DisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5B7251AB38F00A72518 /* DisplayController.swift */; };
 		16F7A5BA251F718D00A72518 /* introViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5B9251F718D00A72518 /* introViewController.swift */; };
@@ -53,8 +54,10 @@
 		162712222538D257004FB9E4 /* uniqueFishCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uniqueFishCount.swift; sourceTree = "<group>"; };
 		162712242538D5F0004FB9E4 /* page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = page.swift; sourceTree = "<group>"; };
 		1627122A2548C164004FB9E4 /* currentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currentUser.swift; sourceTree = "<group>"; };
+		1627122C2550ABDF004FB9E4 /* AIUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIUtil.swift; sourceTree = "<group>"; };
+		162712312550B528004FB9E4 /* model_unquant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_unquant.tflite; sourceTree = "<group>"; };
+		162712322550C5CE004FB9E4 /* model_unquant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_unquant.tflite; sourceTree = "<group>"; };
 		16F7A56D251AA32700A72518 /* labels copy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "labels copy.txt"; path = "CatVsDogClassifierSample/labels copy.txt"; sourceTree = "<group>"; };
-		16F7A56E251AA32700A72518 /* model_unquant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_unquant.tflite; path = CatVsDogClassifierSample/model_unquant.tflite; sourceTree = "<group>"; };
 		16F7A5B5251AB38100A72518 /* PicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicController.swift; sourceTree = "<group>"; };
 		16F7A5B7251AB38F00A72518 /* DisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayController.swift; sourceTree = "<group>"; };
 		16F7A5B9251F718D00A72518 /* introViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				162712222538D257004FB9E4 /* uniqueFishCount.swift */,
 				162712242538D5F0004FB9E4 /* page.swift */,
 				1627122A2548C164004FB9E4 /* currentUser.swift */,
+				1627122C2550ABDF004FB9E4 /* AIUtil.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -160,10 +164,11 @@
 		AA66668D22B76EF500217E21 = {
 			isa = PBXGroup;
 			children = (
+				162712322550C5CE004FB9E4 /* model_unquant.tflite */,
 				012FFC1322F54DE000454B37 /* converted_model.tflite */,
 				012FFC1422F54DE000454B37 /* labels.txt */,
+				162712312550B528004FB9E4 /* model_unquant.tflite */,
 				16F7A56D251AA32700A72518 /* labels copy.txt */,
-				16F7A56E251AA32700A72518 /* model_unquant.tflite */,
 				AA66669822B76EF600217E21 /* CatVsDogClassifierSample */,
 				AA66669722B76EF600217E21 /* Products */,
 				ABBEFB10C50B00247C647B03 /* Frameworks */,
@@ -290,7 +295,7 @@
 				16F7A56F251AA32700A72518 /* labels copy.txt in Resources */,
 				AA6666A122B76EF700217E21 /* Assets.xcassets in Resources */,
 				012FFC1622F54DE000454B37 /* labels.txt in Resources */,
-				16F7A570251AA32700A72518 /* model_unquant.tflite in Resources */,
+				162712332550C5CE004FB9E4 /* model_unquant.tflite in Resources */,
 				012FFC1522F54DE000454B37 /* converted_model.tflite in Resources */,
 				AA66669F22B76EF600217E21 /* Main.storyboard in Resources */,
 			);
@@ -348,6 +353,7 @@
 				AA66669C22B76EF600217E21 /* ViewController.swift in Sources */,
 				16F7A5CA251F724000A72518 /* CatchDateCollectionView.swift in Sources */,
 				16F7A5BC251F719D00A72518 /* login.swift in Sources */,
+				1627122D2550ABDF004FB9E4 /* AIUtil.swift in Sources */,
 				16F7A5C0251F71C900A72518 /* CatchInfoPage.swift in Sources */,
 				16F7A5C2251F71D800A72518 /* settings.swift in Sources */,
 				AA66669A22B76EF600217E21 /* AppDelegate.swift in Sources */,

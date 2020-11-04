@@ -29,6 +29,7 @@ class login: UIViewController {
     }
     
     @IBAction func loginToggled(_ sender: Any) {
+        self.showSpinner()
         PFUser.logInWithUsername(inBackground:usernameTextField.text!, password:passwordTextField.text!) {
           (user, error) -> Void in
           if user != nil {
