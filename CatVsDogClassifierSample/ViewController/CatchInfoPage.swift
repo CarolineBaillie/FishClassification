@@ -30,6 +30,7 @@ class CatchInfoPage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.descriptionField.backgroundColor = UIColor.white
         self.arrayPage = sessionManager.shared.FishByType
         self.labelField.text = arrayPage[row!].fishType
         self.descriptionField.text = arrayPage[row!].desc

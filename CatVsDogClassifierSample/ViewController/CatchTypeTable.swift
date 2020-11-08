@@ -17,15 +17,25 @@ class CatchTypeTable: UITableViewController {
     var Ftypes = [String]()
     
     override func viewDidLoad() {
+        //get rid of spinner
         self.removeSpinner()
         super.viewDidLoad()
+        //set background to white
+        self.tableView.backgroundColor = UIColor.white
+        //update the types and counts for all fish
         sessionManager.shared.UpdateFishCat { (success) in }
+        //get the variables from sessionManager
         self.tableD = sessionManager.shared.GlobalDict
         self.Ftypes = sessionManager.shared.AllTypes
         
         //go back only to settings
         let newBackButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(CatchTypeTable.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
+    }
+    
+    //to set color to white
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
     
     @objc func back(sender: UIBarButtonItem) {
@@ -47,6 +57,11 @@ class CatchTypeTable: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Create a variable that you want to send based on the destination view controller
         // You can get a reference to the data by using indexPath shown below
+        //set color to white
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.backgroundColor = UIColor.clear
+        }
+        
         let fish = Ftypes[indexPath.row]
 
         // Create an instance of PlayerTableViewController and pass the variable

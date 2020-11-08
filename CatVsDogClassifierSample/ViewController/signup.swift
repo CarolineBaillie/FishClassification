@@ -20,6 +20,22 @@ class signup: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonStyle.layer.cornerRadius = 7
+        usernameTextField.layer.borderColor = UIColor.lightGray.cgColor
+        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
+        usernameTextField.layer.borderWidth = 1
+        passwordTextField.layer.borderWidth = 1
+        emailTextField.layer.borderWidth = 1
+        emailTextField.layer.cornerRadius = 7
+        usernameTextField.layer.cornerRadius = 7
+        passwordTextField.layer.cornerRadius = 7
+        usernameTextField.attributedPlaceholder = NSAttributedString(string:usernameTextField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string:passwordTextField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        emailTextField.attributedPlaceholder = NSAttributedString(string:emailTextField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        
+        usernameTextField.textColor = UIColor.black
+        passwordTextField.textColor = UIColor.black
+        emailTextField.textColor = UIColor.black
     }
     
     //get rid of keyboard when touch screen

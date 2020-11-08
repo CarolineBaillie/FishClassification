@@ -27,7 +27,33 @@ class PicInfo : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setup stuff to look nice
+        self.descriptionField.backgroundColor = UIColor.white
+        locationField.layer.borderColor = UIColor.lightGray.cgColor
+        dateField.layer.borderColor = UIColor.lightGray.cgColor
+        weightField.layer.borderColor = UIColor.lightGray.cgColor
+        dimensionsField.layer.borderColor = UIColor.lightGray.cgColor
+        locationField.layer.borderWidth = 1
+        dateField.layer.borderWidth = 1
+        weightField.layer.borderWidth = 1
+        dimensionsField.layer.borderWidth = 1
+        locationField.layer.cornerRadius = 7
+        dateField.layer.cornerRadius = 7
+        weightField.layer.cornerRadius = 7
+        dimensionsField.layer.cornerRadius = 7
+        locationField.attributedPlaceholder = NSAttributedString(string:locationField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        dateField.attributedPlaceholder = NSAttributedString(string:dateField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        weightField.attributedPlaceholder = NSAttributedString(string:weightField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        dimensionsField.attributedPlaceholder = NSAttributedString(string:dimensionsField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        locationField.textColor = UIColor.black
+        dateField.textColor = UIColor.black
+        weightField.textColor = UIColor.black
+        dimensionsField.textColor = UIColor.black
+        
+        //date selction thing
         datePicker = UIDatePicker()
+        datePicker?.frame = CGRect(x: 0, y: 0, width: 320, height: 90);
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(PicInfo.dateChanged(datePicker:)), for: .valueChanged)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PicInfo.viewTapped(gestureRecognizer:)))

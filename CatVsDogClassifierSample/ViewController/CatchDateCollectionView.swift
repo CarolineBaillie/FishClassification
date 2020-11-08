@@ -21,6 +21,9 @@ class CatchDateCollectionView: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set bcolor
+        self.collectionView.backgroundColor = UIColor.white
+        
         sessionManager.shared.requestGetPage { (success) in
             if success {
                 self.collectionData = sessionManager.shared.pageArray
@@ -45,6 +48,10 @@ class CatchDateCollectionView: UICollectionViewController {
         return customCell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //change color to white
+        if let cell = collectionView.cellForItem(at: indexPath) as? CustomCellCollection {
+            cell.backgroundColor = UIColor.white
+        }
 
         // Create an instance of PlayerTableViewController and pass the variable
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
