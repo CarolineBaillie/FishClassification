@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Parse
 
-class PicInfo : UIViewController {
+class PicInfo : UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var descriptionField: UITextView!
     @IBOutlet weak var imageTaken: UIImageView!
@@ -28,6 +28,7 @@ class PicInfo : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        weightField.delegate = self
         //setup stuff to look nice
         self.descriptionField.backgroundColor = UIColor.white
         locationField.layer.borderColor = UIColor.lightGray.cgColor
@@ -96,6 +97,10 @@ class PicInfo : UIViewController {
                 print("failed")
             }
         }
+    }
+    
+    func weightUpdated() {
+        
     }
     
     

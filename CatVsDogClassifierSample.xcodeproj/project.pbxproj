@@ -27,11 +27,13 @@
 		16F7A5BE251F71A900A72518 /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5BD251F71A900A72518 /* signup.swift */; };
 		16F7A5C0251F71C900A72518 /* CatchInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5BF251F71C900A72518 /* CatchInfoPage.swift */; };
 		16F7A5C2251F71D800A72518 /* settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5C1251F71D800A72518 /* settings.swift */; };
-		16F7A5C4251F71F300A72518 /* account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5C3251F71F300A72518 /* account.swift */; };
 		16F7A5C6251F720C00A72518 /* BrowseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5C5251F720C00A72518 /* BrowseCollectionView.swift */; };
 		16F7A5C8251F723100A72518 /* CatchTypeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5C7251F723100A72518 /* CatchTypeTable.swift */; };
 		16F7A5CA251F724000A72518 /* CatchDateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5C9251F724000A72518 /* CatchDateCollectionView.swift */; };
 		16F7A5CC25220FF200A72518 /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5CB25220FF200A72518 /* UploadController.swift */; };
+		87DC81FD2558534F003E7CA0 /* fishCrop.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 87DC81FB2558534F003E7CA0 /* fishCrop.tflite */; };
+		87DC81FE2558534F003E7CA0 /* fishLabels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87DC81FC2558534F003E7CA0 /* fishLabels.txt */; };
+		87DC820225608726003E7CA0 /* CatchInfoPageBrowse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DC820125608726003E7CA0 /* CatchInfoPageBrowse.swift */; };
 		AA6222E722DDF9E20008F0C0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6222E622DDF9E20008F0C0 /* UIImageExtension.swift */; };
 		AA66669A22B76EF600217E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66669922B76EF600217E21 /* AppDelegate.swift */; };
 		AA66669C22B76EF600217E21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66669B22B76EF600217E21 /* ViewController.swift */; };
@@ -65,12 +67,14 @@
 		16F7A5BD251F71A900A72518 /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
 		16F7A5BF251F71C900A72518 /* CatchInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchInfoPage.swift; sourceTree = "<group>"; };
 		16F7A5C1251F71D800A72518 /* settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settings.swift; sourceTree = "<group>"; };
-		16F7A5C3251F71F300A72518 /* account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = account.swift; sourceTree = "<group>"; };
 		16F7A5C5251F720C00A72518 /* BrowseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionView.swift; sourceTree = "<group>"; };
 		16F7A5C7251F723100A72518 /* CatchTypeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTypeTable.swift; sourceTree = "<group>"; };
 		16F7A5C9251F724000A72518 /* CatchDateCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchDateCollectionView.swift; sourceTree = "<group>"; };
 		16F7A5CB25220FF200A72518 /* UploadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
 		555CF2C732363183092B5673 /* Pods-CatVsDogClassifierSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatVsDogClassifierSample.debug.xcconfig"; path = "Target Support Files/Pods-CatVsDogClassifierSample/Pods-CatVsDogClassifierSample.debug.xcconfig"; sourceTree = "<group>"; };
+		87DC81FB2558534F003E7CA0 /* fishCrop.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = fishCrop.tflite; path = ../converted_tflite/fishCrop.tflite; sourceTree = "<group>"; };
+		87DC81FC2558534F003E7CA0 /* fishLabels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fishLabels.txt; path = ../converted_tflite/fishLabels.txt; sourceTree = "<group>"; };
+		87DC820125608726003E7CA0 /* CatchInfoPageBrowse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchInfoPageBrowse.swift; sourceTree = "<group>"; };
 		89DFF744FD05384A12A3A606 /* Pods-CatVsDogClassifierSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatVsDogClassifierSample.release.xcconfig"; path = "Target Support Files/Pods-CatVsDogClassifierSample/Pods-CatVsDogClassifierSample.release.xcconfig"; sourceTree = "<group>"; };
 		AA6222E622DDF9E20008F0C0 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		AA66669622B76EF600217E21 /* CatVsDogClassifierSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatVsDogClassifierSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,8 +120,8 @@
 				16F7A5BB251F719D00A72518 /* login.swift */,
 				16F7A5BD251F71A900A72518 /* signup.swift */,
 				16F7A5BF251F71C900A72518 /* CatchInfoPage.swift */,
+				87DC820125608726003E7CA0 /* CatchInfoPageBrowse.swift */,
 				16F7A5C1251F71D800A72518 /* settings.swift */,
-				16F7A5C3251F71F300A72518 /* account.swift */,
 				16F7A5C5251F720C00A72518 /* BrowseCollectionView.swift */,
 				16F7A5C7251F723100A72518 /* CatchTypeTable.swift */,
 				16F7A5C9251F724000A72518 /* CatchDateCollectionView.swift */,
@@ -164,6 +168,8 @@
 		AA66668D22B76EF500217E21 = {
 			isa = PBXGroup;
 			children = (
+				87DC81FB2558534F003E7CA0 /* fishCrop.tflite */,
+				87DC81FC2558534F003E7CA0 /* fishLabels.txt */,
 				162712322550C5CE004FB9E4 /* model_unquant.tflite */,
 				012FFC1322F54DE000454B37 /* converted_model.tflite */,
 				012FFC1422F54DE000454B37 /* labels.txt */,
@@ -291,9 +297,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DC81FE2558534F003E7CA0 /* fishLabels.txt in Resources */,
 				AA6666A422B76EF700217E21 /* LaunchScreen.storyboard in Resources */,
 				16F7A56F251AA32700A72518 /* labels copy.txt in Resources */,
 				AA6666A122B76EF700217E21 /* Assets.xcassets in Resources */,
+				87DC81FD2558534F003E7CA0 /* fishCrop.tflite in Resources */,
 				012FFC1622F54DE000454B37 /* labels.txt in Resources */,
 				162712332550C5CE004FB9E4 /* model_unquant.tflite in Resources */,
 				012FFC1522F54DE000454B37 /* converted_model.tflite in Resources */,
@@ -358,11 +366,11 @@
 				16F7A5C2251F71D800A72518 /* settings.swift in Sources */,
 				AA66669A22B76EF600217E21 /* AppDelegate.swift in Sources */,
 				AA6666B022B776B000217E21 /* ModelDataHandler.swift in Sources */,
+				87DC820225608726003E7CA0 /* CatchInfoPageBrowse.swift in Sources */,
 				1627121F2538CD40004FB9E4 /* sessionManager.swift in Sources */,
 				AA6222E722DDF9E20008F0C0 /* UIImageExtension.swift in Sources */,
 				16271219252563CC004FB9E4 /* PicInfo.swift in Sources */,
 				162712252538D5F0004FB9E4 /* page.swift in Sources */,
-				16F7A5C4251F71F300A72518 /* account.swift in Sources */,
 				16F7A5B8251AB38F00A72518 /* DisplayController.swift in Sources */,
 				AA6666AD22B7740200217E21 /* ImageCell.swift in Sources */,
 				16F7A5BE251F71A900A72518 /* signup.swift in Sources */,

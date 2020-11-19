@@ -23,13 +23,6 @@ class CatchDateCollectionView: UICollectionViewController {
         super.viewDidLoad()
         //set bcolor
         self.collectionView.backgroundColor = UIColor.white
-        
-        sessionManager.shared.requestGetPage { (success) in
-            if success {
-                self.collectionData = sessionManager.shared.pageArray
-                self.collectionView.reloadData()
-            }
-        }
         sessionManager.shared.GetFishByType(fishType: fish!) { (success) in
             if success {
                 self.Pages = sessionManager.shared.FishByType

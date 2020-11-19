@@ -28,7 +28,7 @@ typealias FileInfo = (name: String, extension: String)
 
 /// Information about the MobileNet model.
 enum MobileNet {
-  static let modelInfo: FileInfo = (name: "model_unquant", extension: "tflite")
+  static let modelInfo: FileInfo = (name: "fishCrop", extension: "tflite")
 }
 
 /// This class handles all data preprocessing and makes calls to run inference on a given frame
@@ -53,7 +53,10 @@ class ModelDataHandler {
   // MARK: - Private Properties
 
   /// List of labels from the given labels file.
-  private var labels: [String] = ["Redear Sunfish", "Green Sunfish", "Redbreast Sunfish", "Bluegill Sunfish", "Warmouth Sunfish", "Pumpkinseed Sunfish", "Flathead Catfish", "Blue Catfish", "Channel Catfish", "Largemouth Bass", "Smallmouth Bass", "Striped Bass", "White Bass", "Brown Trout", "Brook Trout", "Rainbow Trout", "Cutthroat Trout", "Lake Trout", "Walleye", "White Crappie", "Black Crappie", "Amberjack", "Yellow Perch", "Sauger", "Northern Pike", "Muskellunge", "Chain Pickerel", "American Pickerel", "Redfin Pickerel", "Atlantic Salmon", "Chinook Salmon", "Coho Salmon", "Pink Salmon", "Carp", "Sturgeon", "Skipjack Tuna", "Bluefin Tuna", "Yellowfin Tuna", "Atlantic Cod", "Pacific Cod"]
+  private var labels: [String] = ["Yellowfin Tuna", "Skipjack Tuna", "Bluefin Tuna", "Rainbow Trout", "Lake Trout", "Cutthroat Trout", "Brown Trout", "Brook Trout", "Warmouth Sunfish", "Redear Sunfish", "Redbreast Sunfish", "Pumpkinseed Sunfish", "Green Sunfish", "Bluegill Sunfish", "Pink Salmon", "Coho Salmon", "Chinook Salmon", "Atlantic Salmon", "Redfin Pickerel", "Chain Pickerel", "American Pickerel", "Yellow Perch", "Walleye", "Sturgeon", "Sauger", "Northern Pike", "Muskellunge", "Carp", "Amberjack", "White Crappie", "Black Crappie", "Pacific Cod", "Atlantic Cod", "Flathead Catfish", "Channel Catfish", "Blue Catfish", "White Bass", "Striped Bass", "Smallmouth Bass", "Largemouth Bass"]
+    
+    // UNCROPPED LABELS
+//    ["Redear Sunfish", "Green Sunfish", "Redbreast Sunfish", "Bluegill Sunfish", "Warmouth Sunfish", "Pumpkinseed Sunfish", "Flathead Catfish", "Blue Catfish", "Channel Catfish", "Largemouth Bass", "Smallmouth Bass", "Striped Bass", "White Bass", "Brown Trout", "Brook Trout", "Rainbow Trout", "Cutthroat Trout", "Lake Trout", "Walleye", "White Crappie", "Black Crappie", "Amberjack", "Yellow Perch", "Sauger", "Northern Pike", "Muskellunge", "Chain Pickerel", "American Pickerel", "Redfin Pickerel", "Atlantic Salmon", "Chinook Salmon", "Coho Salmon", "Pink Salmon", "Carp", "Sturgeon", "Skipjack Tuna", "Bluefin Tuna", "Yellowfin Tuna", "Atlantic Cod", "Pacific Cod"]
   
   /// TensorFlow Lite `Interpreter` object for performing inference on a given model.
   private var interpreter: Interpreter

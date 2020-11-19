@@ -24,6 +24,7 @@ class sessionManager: NSObject {
     var FishByType : [page]! = []
     var GlobalDict = [String : Int]()
     var AllTypes : [String]! = []
+    var BrowsePages : [page]! = []
     
     override init() {
         super.init()
@@ -66,6 +67,7 @@ class sessionManager: NSObject {
     }
     
     func UpdateFishCat(completion:@escaping (_ success:Bool) -> ()) {
+        var types : [String]! = []
         var dictionary = [String : Int]()
         //change to create new copy rather than attached copy
         for page in AllPages {
@@ -74,11 +76,12 @@ class sessionManager: NSObject {
             if (keyExists) {
                 dictionary[key]! += 1
             } else {
-                AllTypes.append(key)
+                types.append(key)
                 dictionary[key] = 1
             }
         }
         //sort dict
+        AllTypes = types
         GlobalDict = dictionary
         completion(true)
     }
@@ -135,7 +138,6 @@ class sessionManager: NSObject {
 //                The object has been saved.
 //                save to local array
                 self.AllPages.append(page)
-                self.AllTypes.append(page.fishType)
                 self.UpdateFishCat { (success) in
                     if success {
                         print("updated dictionary")
@@ -149,6 +151,77 @@ class sessionManager: NSObject {
             }
         }
     }
+    
+    func requestGetPagesBrowse (completion:@escaping (_ success:Bool) -> ()) {
+        BrowsePages.removeAll()
+        let query = PFQuery(className: "page")
+        query.whereKey("userID", notEqualTo: user.id)
+        query.limit = 20
+        query.findObjectsInBackground { (objects, error) in
+            // no errors
+            if error == nil {
+                // if there are objects in the array
+                if let returnedObjects = objects {
+                    // loop through all objects in array
+                    for object in returnedObjects {
+                        let file = object["Image"] as! PFFileObject
+                        file.getDataInBackground { (data, error) in
+                            if error == nil {
+                                if let imageData = data {
+                                    let image = UIImage(data: imageData) //can then display on screen
+                                    let fishData = page(fishType: object["fishType"]! as! String, Image: image!, desc: object["description"]! as! String, location: object["location"]! as! String, catchDate: object["catchDate"]! as! String, weight: object["weight"]! as! String, dimensions: object["dimensions"]! as! String)
+                                        //append to array
+                                    self.BrowsePages.append(fishData)
+                                }
+                            }
+                            completion(true)
+                        }
+                    }
+                }
+            }
+            else {
+                //return false completion if fails
+                completion(false)
+            }
+        }
+    }
+    
+//    func requestGetPagesBrowse (completion:@escaping (_ success:Bool) -> ()) {
+////        BrowsePages.removeAll()
+//        let query = PFQuery(className: "page")
+//        query.whereKey("userID", notEqualTo: user.id)
+//        query.limit = 20
+//        query.findObjectsInBackground { (objects, error) in
+//            // no errors
+//            if error == nil {
+//                var newArray : [page]! = []
+//                // if there are objects in the array
+//                if let returnedObjects = objects {
+//                    // loop through all objects in array
+//                    for object in returnedObjects {
+//                        let file = object["Image"] as! PFFileObject
+//                        file.getDataInBackground { (data, error) in
+//                            if error == nil {
+//                                if let imageData = data {
+//                                    let image = UIImage(data: imageData) //can then display on screen
+//                                    let fishData = page(fishType: object["fishType"]! as! String, Image: image!, desc: object["description"]! as! String, location: object["location"]! as! String, catchDate: object["catchDate"]! as! String, weight: object["weight"]! as! String, dimensions: object["dimensions"]! as! String)
+//                                        //append to array
+//                                    newArray.append(fishData)
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//                self.BrowsePages = newArray
+//                print(self.BrowsePages)
+//                completion(true)
+//            }
+//            else {
+//                //return false completion if fails
+//                completion(false)
+//            }
+//        }
+//    }
     
     
     
