@@ -51,8 +51,8 @@ class ModelDataHandler {
   let inputHeight = 224
   
   // MARK: - Private Properties
-
-  /// List of labels from the given labels file.
+    
+  /// List of labels from the given labels file.                                
   private var labels: [String] = ["Yellowfin Tuna", "Skipjack Tuna", "Bluefin Tuna", "Rainbow Trout", "Lake Trout", "Cutthroat Trout", "Brown Trout", "Brook Trout", "Warmouth Sunfish", "Redear Sunfish", "Redbreast Sunfish", "Pumpkinseed Sunfish", "Green Sunfish", "Bluegill Sunfish", "Pink Salmon", "Coho Salmon", "Chinook Salmon", "Atlantic Salmon", "Redfin Pickerel", "Chain Pickerel", "American Pickerel", "Yellow Perch", "Walleye", "Sturgeon", "Sauger", "Northern Pike", "Muskellunge", "Carp", "Amberjack", "White Crappie", "Black Crappie", "Pacific Cod", "Atlantic Cod", "Flathead Catfish", "Channel Catfish", "Blue Catfish", "White Bass", "Striped Bass", "Smallmouth Bass", "Largemouth Bass"]
     
     // UNCROPPED LABELS

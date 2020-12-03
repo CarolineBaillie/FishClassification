@@ -46,6 +46,8 @@ class signup: UIViewController {
         emailTextField.resignFirstResponder()
     }
     
+    
+    
     @IBAction func signupToggled(_ sender: Any) {
         self.showSpinner()
         //check username and password field are not empty / nil
@@ -55,7 +57,9 @@ class signup: UIViewController {
         user.email = emailTextField.text!
         user.signUpInBackground { (result, error) in
             if error == nil && result == true {
-                //successfully loged in
+                //successfully signed up in
+                let cUser = currentUser(username: user["username"] as! String, id: user.objectId!)
+                sessionManager.shared.user = cUser
                 //next screen
                 let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "settings") as! settings
                 self.navigationController?.pushViewController(secondViewController, animated: true)

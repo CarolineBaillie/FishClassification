@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
           // Override point for customization after application launch.
           
@@ -23,15 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //        PFUser.enableAutomaticUser()
   //        PFUser.currentUser().incrementKey("RunCount")
   //        PFUser.currentUser().saveInBackground()
-          let configuration = ParseClientConfiguration {
-              //enable local datastore
-              $0.isLocalDatastoreEnabled = true
-              //connect to sashido
-              $0.applicationId = "WVF13Wqp0bzfIIiGgkFfJxROzLO3gJIzONVzARPD"
-              $0.clientKey = "ii0myzj4zbIOgF3pC7gKEWBgROONORLPzzDO7zSV"
-              $0.server = "https://pg-app-7mz2huwpuy0wezb3b62zt4w3tux1c0.scalabl.cloud/1/"
-          }
-          Parse.initialize(with: configuration)
+//          let configuration = ParseClientConfiguration {
+//              //enable local datastore
+//              $0.isLocalDatastoreEnabled = true
+//              //connect to sashido
+//              $0.applicationId = "WVF13Wqp0bzfIIiGgkFfJxROzLO3gJIzONVzARPD"
+//              $0.clientKey = "ii0myzj4zbIOgF3pC7gKEWBgROONORLPzzDO7zSV"
+//              $0.server = "https://pg-app-7mz2huwpuy0wezb3b62zt4w3tux1c0.scalabl.cloud/1/"
+//          }
+//          Parse.initialize(with: configuration)
+    let configuration = ParseClientConfiguration {
+      $0.applicationId = "riJJNF5ADG8ephVYADEt2hbO8DP6Hz3RVQVRQTHM"
+      $0.clientKey = "lr1QFbn7dUgQzqE3dB2dIBIVRzPRRQOH6VOVQlPD"
+      $0.server = "https://pg-app-6e6y8sb7btjrix1k2kzy5ipujjzu2x.scalabl.cloud/1/"
+    }
+    Parse.initialize(with: configuration)
           
           return true
       }

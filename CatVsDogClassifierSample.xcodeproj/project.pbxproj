@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		012FFC1222F54D9300454B37 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012FFC1122F54D9300454B37 /* CVPixelBufferExtension.swift */; };
-		012FFC1522F54DE000454B37 /* converted_model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 012FFC1322F54DE000454B37 /* converted_model.tflite */; };
 		012FFC1622F54DE000454B37 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 012FFC1422F54DE000454B37 /* labels.txt */; };
 		16271219252563CC004FB9E4 /* PicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16271218252563CC004FB9E4 /* PicInfo.swift */; };
 		1627121B25267DBE004FB9E4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1627121A25267DBE004FB9E4 /* CustomCell.swift */; };
@@ -18,7 +17,6 @@
 		162712252538D5F0004FB9E4 /* page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162712242538D5F0004FB9E4 /* page.swift */; };
 		1627122B2548C164004FB9E4 /* currentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1627122A2548C164004FB9E4 /* currentUser.swift */; };
 		1627122D2550ABDF004FB9E4 /* AIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1627122C2550ABDF004FB9E4 /* AIUtil.swift */; };
-		162712332550C5CE004FB9E4 /* model_unquant.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 162712322550C5CE004FB9E4 /* model_unquant.tflite */; };
 		16F7A56F251AA32700A72518 /* labels copy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16F7A56D251AA32700A72518 /* labels copy.txt */; };
 		16F7A5B6251AB38100A72518 /* PicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5B5251AB38100A72518 /* PicController.swift */; };
 		16F7A5B8251AB38F00A72518 /* DisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A5B7251AB38F00A72518 /* DisplayController.swift */; };
@@ -47,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		012FFC1122F54D9300454B37 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CVPixelBufferExtension.swift; path = CatVsDogClassifierSample/Extensions/CVPixelBufferExtension.swift; sourceTree = SOURCE_ROOT; };
-		012FFC1322F54DE000454B37 /* converted_model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = converted_model.tflite; path = CatVsDogClassifierSample/converted_model.tflite; sourceTree = "<group>"; };
 		012FFC1422F54DE000454B37 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = CatVsDogClassifierSample/labels.txt; sourceTree = "<group>"; };
 		16271218252563CC004FB9E4 /* PicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicInfo.swift; sourceTree = "<group>"; };
 		1627121A25267DBE004FB9E4 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -57,8 +54,6 @@
 		162712242538D5F0004FB9E4 /* page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = page.swift; sourceTree = "<group>"; };
 		1627122A2548C164004FB9E4 /* currentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currentUser.swift; sourceTree = "<group>"; };
 		1627122C2550ABDF004FB9E4 /* AIUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIUtil.swift; sourceTree = "<group>"; };
-		162712312550B528004FB9E4 /* model_unquant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_unquant.tflite; sourceTree = "<group>"; };
-		162712322550C5CE004FB9E4 /* model_unquant.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_unquant.tflite; sourceTree = "<group>"; };
 		16F7A56D251AA32700A72518 /* labels copy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "labels copy.txt"; path = "CatVsDogClassifierSample/labels copy.txt"; sourceTree = "<group>"; };
 		16F7A5B5251AB38100A72518 /* PicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicController.swift; sourceTree = "<group>"; };
 		16F7A5B7251AB38F00A72518 /* DisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayController.swift; sourceTree = "<group>"; };
@@ -170,10 +165,7 @@
 			children = (
 				87DC81FB2558534F003E7CA0 /* fishCrop.tflite */,
 				87DC81FC2558534F003E7CA0 /* fishLabels.txt */,
-				162712322550C5CE004FB9E4 /* model_unquant.tflite */,
-				012FFC1322F54DE000454B37 /* converted_model.tflite */,
 				012FFC1422F54DE000454B37 /* labels.txt */,
-				162712312550B528004FB9E4 /* model_unquant.tflite */,
 				16F7A56D251AA32700A72518 /* labels copy.txt */,
 				AA66669822B76EF600217E21 /* CatVsDogClassifierSample */,
 				AA66669722B76EF600217E21 /* Products */,
@@ -303,8 +295,6 @@
 				AA6666A122B76EF700217E21 /* Assets.xcassets in Resources */,
 				87DC81FD2558534F003E7CA0 /* fishCrop.tflite in Resources */,
 				012FFC1622F54DE000454B37 /* labels.txt in Resources */,
-				162712332550C5CE004FB9E4 /* model_unquant.tflite in Resources */,
-				012FFC1522F54DE000454B37 /* converted_model.tflite in Resources */,
 				AA66669F22B76EF600217E21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

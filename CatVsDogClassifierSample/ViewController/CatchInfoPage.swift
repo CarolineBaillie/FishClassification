@@ -28,6 +28,7 @@ class CatchInfoPage: UIViewController {
         self.descriptionField.backgroundColor = UIColor.white
         self.arrayPage = sessionManager.shared.FishByType
         self.labelField.text = arrayPage[row!].fishType
+        labelField.adjustsFontSizeToFitWidth = labelField.minimumScaleFactor == 0.2
         self.descriptionField.text = arrayPage[row!].desc
         self.dateField.text = arrayPage[row!].catchDate
         self.locationField.text = arrayPage[row!].location

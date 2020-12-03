@@ -84,7 +84,7 @@ class PicInfo : UIViewController, UITextFieldDelegate {
     
     @IBAction func submitToggled(_ sender: Any) {
         self.showSpinner()
-        //lower image size in swift
+        //create new page
         var newPage = page(fishType: inference, Image: image, desc: descriptionField.text, location: locationField.text!, catchDate: dateField.text!, weight:weightField.text!, dimensions: dimensionsField.text!)
         sessionManager.shared.requestCreateNewPage(page: newPage) { (success) in
             if success {
